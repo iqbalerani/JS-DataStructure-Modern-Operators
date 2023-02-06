@@ -44,6 +44,77 @@ const restaurant = {
   },
 };
 
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// for (const item of menu) console.log(item);
+
+// for (const day of Object.keys(restaurant.openingHours)) {
+//   // console.log(day);
+// }
+
+// for (const day of Object.values(restaurant.openingHours)) {
+//   // console.log(day);
+// }
+// //Entire Objects
+// const enteries = Object.entries(restaurant.openingHours);
+
+// for (const [key, { open, close }] of enteries) {
+//   console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
+
+//Optional Chaining
+// const obj = {
+//   a: {
+//     b: {
+//       c: 1,
+//     },
+//   },
+// };
+
+// // // Without optional chaining
+// // let result = obj.a.b.c;
+// // console.log(result); // 42
+
+// // obj.a = undefined;
+
+// // // Without optional chaining, this will throw a TypeError
+// // try {
+// //   result = obj.a.b.c;
+// //   console.log(result);
+// // } catch (error) {
+// //   console.error(error); // TypeError: Cannot read property 'b' of undefined
+// // }
+
+// // With optional chaining
+// let result = obj?.a?.b?.c;
+// console.log(result); // undefined
+
+// const obj = {
+//   name: 'John Doe',
+//   address: {
+//     city: 'London',
+//     country: 'UK',
+//   },
+// };
+
+// // Without optional chaining
+// // let city = obj.address.city;
+// // console.log(city); // London
+
+// // obj.address = null;
+
+// // // Without optional chaining, this will throw a TypeError
+// // try {
+// //   city = obj.address.city;
+// //   console.log(city);
+// // } catch (error) {
+// //   console.error(error); // TypeError: Cannot read property 'city' of null
+// // }
+
+// // With optional chaining
+// let city = obj?.address?.city;
+// console.log(city); // undefined
+
 // const result = restaurant.orderDelivery({
 //   time: '22:30',
 //   address: 'Bahria',
@@ -250,3 +321,7 @@ const restaurant = {
 // rest2.owner = rest2.owner && '<ANNOYMOUS>';
 // console.log(rest1);
 // console.log(rest2);
+
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta']);
+
+console.log(ordersSet);
