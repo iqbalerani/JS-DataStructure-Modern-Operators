@@ -322,6 +322,97 @@ const restaurant = {
 // console.log(rest1);
 // console.log(rest2);
 
-const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta']);
+// const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta']);
 
-console.log(ordersSet);
+// console.log(ordersSet);
+// console.log(ordersSet.has('Pizza'));
+// ordersSet.add('Garlic Bread');
+// ordersSet.delete('Risotto');
+// // ordersSet.clear();
+
+// console.log(ordersSet);
+
+// const nextOrder = [...new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta'])];
+// console.log(nextOrder);
+
+// console.log(new Set('Iqbal').size);
+
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Firenze Italy');
+// console.log(rest.set(2, 'Lisbon, Portugal'));
+
+// const airline = 'Air Portugal';
+// console.log(airline.slice(4, 5));
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+
+// Fix Capitalization in name
+// const passenger = 'iqBal';
+// const passengerLowercase = passenger.toLowerCase();
+// // console.log(passengerLowercase);
+// const passengerCorrect =
+//   passengerLowercase[0].toUpperCase() + passengerLowercase.slice(1);
+// console.log(passengerCorrect);
+
+// console.log(typeof passengerCorrect);
+
+// Check emails
+// const email = 'hello@jonas.io';
+// const loginEmail = ' Hello@Jonas.Io \n';
+
+// // const lowerEmail = loginEmail.toLowerCase();
+// // const trimmedEmail = lowerEmail.trim();
+// // console.log(trimmedEmail);
+
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+
+// console.log(email === normalizedEmail);
+
+// //replacing
+// const priceGB = '288,97£';
+// const priceUS = priceGB.replace('£', '$').replace(',', '.');
+// console.log(priceUS);
+
+// const announcement =
+//   'All passenger come to boardign door 23. Boarding door 23!';
+// console.log(announcement.replace('door', 'gate'));
+
+// const updatedAnnouncement = announcement.replace(/door/g, 'gate');
+// console.log(updatedAnnouncement);
+
+//Booleans
+// const plane = 'Airbus A320neo';
+// console.log(plane.includes('A320'));
+// console.log(plane.startsWith('Airbus'));
+// console.log(plane.endsWith('neo'));
+
+//Split
+console.log('a+very+nice+string'.split('+'));
+console.log('Iqbal Erani'.split(' '));
+
+const [firstName, lastName] = 'Iqbal Erani'.split(' ');
+console.log(firstName);
+
+//Join
+const updateName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(updateName);
+
+//Padding
+const message = 'Go to gate 23';
+console.log(message.padStart(25, '+').padEnd(45, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(4564854651));
+console.log(maskCreditCard(4564854651545646));
+console.log(maskCreditCard(4456464564641));
+
+//Repeat
+const message2 = 'Bad Weather... All Departures Delayed... \n';
+console.log(message2.repeat(5));
